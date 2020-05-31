@@ -1,0 +1,44 @@
+import java.util.*;
+public class findStringCode
+{
+public static void main(String args[]){
+	/*In each word find the Sum of Difference between the first letter and last letter,
+	 * second letter and the penultimate letter and so on till the center of word. 
+	 * 
+	 * Consider a=A=1 ,b=B=2, c=C=3 upto z=Z=26;
+	 * i.e acc. to english alphabetically order;
+	 * Ex: Web=  [W-b]+[e]=21+5=26
+	 */
+    Scanner in = new Scanner (System.in);
+    String sentence = in.nextLine();
+    String words[] = sentence.split(" ");
+    String result = "";
+
+    for(String word : words){
+      result += String.valueOf(countSum(word));
+    }
+
+    System.out.println("Sum for " + sentence + " is " + result);
+
+}
+
+public static int countSum(String word){
+
+  String input = word.toLowerCase();
+  int sum = 0;
+
+  for( int i = 0; i < input.length()/2; i++) {
+      int s = (input.charAt(i) - 'a') - (input.charAt(input.length() - 1 - i) - 'a');
+      sum += Math.abs(s);
+  }
+
+  if(input.length()%2!=0){
+    sum += input.charAt(input.length()/2) - 'a' + 1;
+  }
+  return sum;
+}
+}
+
+Output:
+world wide web
+Sum for world wide web is 402326
