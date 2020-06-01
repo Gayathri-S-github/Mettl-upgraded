@@ -10,9 +10,9 @@ Assumptions: Let us assume that the given string always contains more than one w
 
 import java.io.*;
 import java.util.*;
-class GetCodeThroughStrings
+class UserMainCode
 {
-public class UserMainCode(String input1)
+public int GetCodeThroughStrings(String input1)
 {
 String words[]=input1.split(" ");
 int add=0;
