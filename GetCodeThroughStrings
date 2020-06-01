@@ -1,0 +1,43 @@
+/* For example , if the string is "Wipro Technologies", the pin should be in the following way.
+Explanation:
+Length of the word 'Wipro' =5
+Length of the word 'Technologies'=12
+12 + 5 =17
+1 + 7= 8
+8 is the output.
+Assumptions: Let us assume that the given string always contains more than one word.
+*/
+
+import java.io.*;
+import java.util.*;
+class GetCodeThroughStrings
+public class UserMainCode(String input1)
+{
+String words[]=input1.split(" ");
+int add=0;
+for( String word: words)
+{
+	add=add+countSum(word);
+}
+int sum=add;
+int sum1=0;
+if(add>9)
+{
+	while(sum>0)
+	{
+		int rem=sum%10;
+		sum1=sum1+rem;
+		sum=sum/10;
+	}
+	return sum1;
+}
+else
+	return add;
+
+}
+public int countSum(String word)
+{
+	int len=word.length();
+	return len;
+}
+}
