@@ -1,0 +1,21 @@
+/* Write a function that takes two numbers in string format and forms a string containing the sum of these two numbwrs.
+Assumption:
+- The input string will contain only numeric digits
+- The input Strings can be of any large lengths
+- The length of the two input string need not be the same.
+- The output Strings will represent only positive numbers.
+*/
+
+import java.io.*;
+import java.util.*;
+import java.math.BigDecimal;
+ class AdditionUsingStrings
+ {
+ public String addnumbersStrings(String input1, String input2)
+ {
+  BigDecimal x=new BigDecimal(input1);
+  BigDecimal y=new BigDecimal(input2);
+  
+  return String.valueOf(x.add(y));
+  }
+}
